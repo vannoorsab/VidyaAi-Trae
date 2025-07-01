@@ -1,0 +1,77 @@
+VidyAI/
+├── client/                      # Frontend React application
+│   ├── public/                  # Static files
+│   │   ├── manifest.json
+│   │   ├── offline.html
+│   │   └── icons/
+│   ├── src/
+│   │   ├── components/          # Reusable UI components
+│   │   ├── pages/               # Page components
+│   │   │   ├── student/
+│   │   │   ├── teacher/
+│   │   │   └── parent/
+│   │   ├── stores/              # State management
+│   │   ├── utils/               # Helper functions
+│   │   ├── App.jsx
+│   │   └── service-worker.js
+│   ├── package.json
+│   └── vite.config.js
+│
+├── server/                      # Backend Node.js application
+│   ├── ai_services/             # Python AI microservices
+│   │   ├── text_evaluator.py
+│   │   ├── code_evaluator.py
+│   │   ├── handwriting_recognizer.py
+│   │   ├── audio_processor.py
+│   │   ├── service_factory.py
+│   │   └── requirements.txt
+│   ├── routes/                  # API routes
+│   │   ├── auth.js
+│   │   ├── students.js
+│   │   ├── teachers.js
+│   │   ├── parents.js
+│   │   └── ai.js
+│   ├── models/                  # Database models
+│   │   ├── student.js
+│   │   ├── teacher.js
+│   │   ├── parent.js
+│   │   └── submission.js
+│   ├── middleware/              # Custom middleware
+│   │   ├── auth.js
+│   │   ├── upload.js
+│   │   └── error-handler.js
+│   ├── config/                  # Configuration files
+│   │   ├── database.js
+│   │   ├── firebase.js
+│   │   └── storage.js
+│   ├── services/                # Business logic
+│   │   ├── evaluation.js
+│   │   ├── notification.js
+│   │   └── storage.js
+│   ├── utils/                   # Helper functions
+│   │   ├── logger.js
+│   │   └── validators.js
+│   ├── index.js                 # Main server file
+│   └── package.json
+│
+├── docs/                        # Documentation
+│   ├── api.md
+│   ├── ai-services.md
+│   ├── deployment.md
+│   └── contributing.md
+│
+├── tests/                       # Test files
+│   ├── client/
+│   ├── server/
+│   └── ai_services/
+│
+├── scripts/                     # Build and deployment scripts
+│   ├── setup.sh
+│   ├── deploy.sh
+│   └── test.sh
+│
+├── .gitignore
+├── .env.example
+├── docker-compose.yml
+├── README.md
+└── LICENSE

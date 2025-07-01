@@ -1,0 +1,86 @@
+{
+  "short_name": "VidyAI",
+  "name": "VidyAI - AI-Powered Education Platform",
+  "description": "An intelligent education platform for students, teachers, and parents with real-time feedback and multilingual support",
+  "icons": [
+    {
+      "src": "favicon.ico",
+      "sizes": "64x64",
+      "type": "image/x-icon"
+    },
+    {
+      "src": "logo192.png",
+      "type": "image/png",
+      "sizes": "192x192",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "logo512.png",
+      "type": "image/png",
+      "sizes": "512x512",
+      "purpose": "any maskable"
+    }
+  ],
+  "start_url": ".",
+  "display": "standalone",
+  "theme_color": "#4F46E5",
+  "background_color": "#F9FAFB",
+  "orientation": "portrait",
+  "categories": ["education", "productivity"],
+  "shortcuts": [
+    {
+      "name": "Submit Work",
+      "short_name": "Submit",
+      "description": "Submit new work for evaluation",
+      "url": "/student/submit",
+      "icons": [{ "src": "submit-icon.png", "sizes": "96x96" }]
+    },
+    {
+      "name": "Review Submissions",
+      "short_name": "Review",
+      "description": "Review pending submissions",
+      "url": "/teacher/review",
+      "icons": [{ "src": "review-icon.png", "sizes": "96x96" }]
+    },
+    {
+      "name": "View Progress",
+      "short_name": "Progress",
+      "description": "View student progress",
+      "url": "/parent/dashboard",
+      "icons": [{ "src": "progress-icon.png", "sizes": "96x96" }]
+    }
+  ],
+  "screenshots": [
+    {
+      "src": "screenshot1.png",
+      "sizes": "1280x720",
+      "type": "image/png",
+      "platform": "wide",
+      "label": "Student Dashboard"
+    },
+    {
+      "src": "screenshot2.png",
+      "sizes": "1280x720",
+      "type": "image/png",
+      "platform": "wide",
+      "label": "Teacher Review Interface"
+    },
+    {
+      "src": "screenshot3.png",
+      "sizes": "1280x720",
+      "type": "image/png",
+      "platform": "wide",
+      "label": "Parent Progress View"
+    }
+  ],
+  "related_applications": [],
+  "prefer_related_applications": false,
+  "features": [
+    "Cross Platform",
+    "Offline Support",
+    "Push Notifications",
+    "File Upload",
+    "Audio Recording",
+    "Multilingual"
+  ]
+}
