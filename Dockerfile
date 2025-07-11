@@ -1,11 +1,11 @@
-# Build frontend
+# Step 1: Build frontend (Vite/React)
 FROM node:18 AS frontend
 WORKDIR /app
 COPY client ./client
 WORKDIR /app/client
 RUN npm install && npm run build
 
-# Build backend
+# Step 2: Set up backend (FastAPI)
 FROM python:3.11 AS backend
 WORKDIR /app
 COPY server ./server
@@ -13,22 +13,11 @@ WORKDIR /app/server
 COPY server/requirements.txt .
 RUN pip install -r requirements.txt
 
-# Final container
+# Step 3: Production image (Nginx)
 FROM nginx:alpine
 COPY nginx.conf /etc/nginx/nginx.conf
-
-# Copy frontend build
 COPY --from=frontend /app/client/dist /usr/share/nginx/html
-
-# Copy backend code
 COPY --from=backend /app/server /app/server
 
-# Install supervisord
-RUN apk add --no-cache python3 py3-pip && pip install supervisor
-
-# Copy supervisord config
-COPY supervisord.conf /etc/supervisord.conf
-
 EXPOSE 80
-
-CMD ["/usr/bin/supervisord", "-c", "/etc/supervisord.conf"]
+CMD ["nginx", "-g", "daemon off;"]
